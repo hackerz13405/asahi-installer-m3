@@ -45,6 +45,7 @@ CHIP_MIN_VER = {
     0x6020: "13.1",     # T6020, M2 Pro
     0x6021: "13.1",     # T6021, M2 Max
     0x6022: "13.4",     # T6022, M2 Ultra
+    0x8122: "14.0",     # T8122, M3
 }
 
 DEVICES = {
@@ -71,6 +72,7 @@ DEVICES = {
     "j475cap":  Device("13.4", False),  # Mac Studio (M2 Max, 2023)
     "j475dap":  Device("13.4", False),  # Mac Studio (M2 Ultra, 2023)
     "j180dap":  Device("13.4", False),  # Mac Pro (M2 Ultra, 2023)
+    "j613ap":   Device("14.0", False),  # MacBook Air (M3, 2024)
 }
 
 # Asahi Linux does not support running in a virtual machine, this option
@@ -101,6 +103,13 @@ IPSW_VERSIONS = [
          False,
          None,
          "https://updates.cdn-apple.com/2023SummerFCS/fullrestores/032-69606/D3E05CDF-E105-434C-A4A1-4E3DC7668DD0/UniversalMac_13.5_22G74_Restore.ipsw"),
+    IPSW("14.4",
+         "14.3",
+         "iBoot-10151.101.3",
+         "23.4.60.0.0,0",
+         False,
+         None,
+         "https://updates.cdn-apple.com/2024WinterFCS/fullrestores/052-61990/47F0DD06-1106-4F2E-9CD6-AE6B361A0EC6/UniversalMac_14.4_23E214_Restore.ipsw"),
 ]
 
 class InstallerMain:
